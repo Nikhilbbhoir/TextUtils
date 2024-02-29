@@ -1,0 +1,8 @@
+.btn.btn-primary:disabled{
+  background-color: #c70000;
+  color: white;
+}
+.btn.btn-warning:disabled{
+  background-color: #c70000;
+  color: white;
+}

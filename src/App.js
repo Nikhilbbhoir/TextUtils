@@ -15,6 +15,7 @@ import{
 function App() {
   const [mode, setMode] = useState('light');
   const [alert, setAlert] = useState(null);
+  const [color, setColor] = useState('');
 
   const showAlert = (message, type)=>{
       setAlert(
@@ -28,13 +29,10 @@ function App() {
       }, 1500);
   }
 
-  // const toggleColor = (value) => {
-    // console.log(value);
-  //   setColor({
-  //     value: value 
-  //   });
-  //   document.body.style.backgroundColor = 'color';
-  // }
+  const toggleColor = (value) => {
+    setColor(value);
+    document.body.style.backgroundColor = color;
+  }
 
   const toggleMode = ()=>{
     if(mode==='light'){
@@ -62,7 +60,7 @@ function App() {
     {/* <Navbar title="TextUtils" aboutText="About Textutils"/> */}
     {/* <Navbar/> */}
     <Router>
-    <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode}/>
+    <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} toggleColor={toggleColor}/>
     {/* <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} toggleColor={toggleColor} setColor={setColor}/> */}
     <Alert alert={alert}/>
     <div className="container my-3">

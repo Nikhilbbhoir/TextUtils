@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
     const handleChange = (event) => {
+      // document.body.style.backgroundColor = event.target.value;
+      // console.log(props);
       props.toggleColor(event.target.value);
   }
   return (
